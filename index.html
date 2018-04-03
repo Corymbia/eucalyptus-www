@@ -8,10 +8,17 @@ a:link    { color: white; }
 a:visited { color: white; }
 a:hover   { color: white; }
 a:active  { color: white; } 
+a.dark:link    { color: #003556; }
+a.dark:visited { color: #003556; }
+a.dark:hover   { color: #003556; }
+a.dark:active  { color: #003556; } 
 pre       { color: #b0b0b0; background: #0f0f0f; font-size: 1.5em; text-align: center; width: 99%; border-style: solid; border-width: 1; border-color: #99cc33 }
+h2        { font-size: 4em; line-height: .5em }
+h3        { font-size: 2em; line-height: .5em }
+td        { vertical-align: text-top }
     </style> 
   </head>
-  <body style="background: #003556; width: 95%; height: 95%; color: white; font-family: arial, helvetica, sans-serif !important;">
+  <body style="background: #003556; height: 95%; color: white; margin: 0px; font-family: arial, helvetica, sans-serif !important;">
 
     <div style="margin: auto; width: 900px; padding: 70px 0;">
       <img src="eucalyptus-logo-rev.png" alt="Eucalyptus"/>
@@ -22,20 +29,68 @@ pre       { color: #b0b0b0; background: #0f0f0f; font-size: 1.5em; text-align: c
       <br/>
       <br/>
 
-      <div>
-       <p>Try Eucalyptus Cloud with a FastStart install by running:</p> 
+      <p>Eucalyptus is open source software for building AWS-compatible private clouds.</p>
 
-       <pre>
+      <p>As an Infrastructure as a Service (IaaS) product, Eucalyptus allows your users 
+         to provision your compute and storage resources on-demand.</p>
+
+       <h2>APIs</h2>
+       
+       <table>
+         <tr><td style="padding-right: 40px"><h3>Compute</h3>
+         <p>Run instances with <b>EC2</b> and <b>AutoScaling</b>/<b>ELB</b>.</p>
+         </td>
+         <td><h3>Storage</h3>
+         <p>Use <b>S3</b> storage to share data and <b>EBS</b> for persistent instance state.</p>
+         </td></tr>
+         <tr><td style="padding-right: 40px"><h3>Management</h3>
+         <p>Use <b>IAM</b> to manage users and control access, and <b>Cloud Formation</b> to manage resources.</p> 
+         </td>
+         <td><h3>Monitoring</h3>
+         <p>Use <b>CloudWatch</b> to monitor your compute resources.</p>
+         </td></tr>
+       </table>
+    </div>
+
+    <div style="background: #c0c0c0; color: #0c0c0c">
+      <div style="margin: auto; width: 900px; padding: 70px 0;">
+        <h2>FastStart</h2>
+
+        <p>Try Eucalyptus with a FastStart install by running:</p> 
+
+        <pre>
 
 
 bash <(curl -Ls https://eucalyptuscloud.org/install)
 
-       </pre>
+        </pre>
 
-       <p>as root, on a CentOS 7.3/4 minimal install with a few IP addresses to spare.</p>
+        <p>as root, on a CentOS 7.3/4 minimal install with a few IP addresses to spare.</p>
 
+        <p>Or for a production install, follow the <a href="https://docs.eucalyptuscloud.org/eucalyptus/4.4.2/index.html#shared/install_section.html" class="dark">installation guide</a></p>.
+      </div>
+    </div>
 
-    <div>
+    <div style="margin: auto; width: 900px; padding: 70px 0;">
+       <h2>Community</h2>
+
+       <table>
+         <tr><td style="padding-right: 40px"><h3>Discuss</h3>
+         <p>Chat on the eucalyptus <a href="http://webchat.freenode.net/?channels=eucalyptus" target="_blank">IRC</a> channel, or
+         ask questions on <a href="https://stackoverflow.com/questions/tagged/eucalyptus" target="_blank">Stack Overflow</a></p>
+         </td>
+         <td><h3>Contribute</h3>
+         <p>Get the <a href="https://github.com/corymbia/eucalyptus" target="_blank">source</a>, or submit an 
+         <a href="https://github.com/corymbia/eucalyptus/issues" target="_blank">issue</a> on GitHub. </p>
+         </td></tr>
+       </table>
+    </div>
+
+    <div style="background: #c0c0c0; color: #0c0c0c; margin: 0px; padding: 0px; border: 0px">
+      <div style="margin: auto; width: 900px; padding-right: 70px 0;">
+        <div style="text-align: right; font-size: 0.8em; line-height: 2em">&copy; Copyright 2018 Eucalyptus Cloud</div>
+      </div>
+    </div>
 
   </body>
 </html>
