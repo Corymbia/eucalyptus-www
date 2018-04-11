@@ -12,15 +12,17 @@ a.dark:link    { color: #003556; }
 a.dark:visited { color: #003556; }
 a.dark:hover   { color: #003556; }
 a.dark:active  { color: #003556; } 
-pre       { color: #b0b0b0; background: #0f0f0f; font-size: 1.5em; text-align: center; width: 99%; border-style: solid; border-width: 1; border-color: #99cc33 }
+pre.sup   { color: #b0b0b0; background: #0f0f0f; font-size: 1.5em; text-align: center; width: 99%; border-style: solid; border-width: 1; border-color: #99cc33 }
+pre.sub   { color: black; background: #c0c0c0; font-size: .8em; font-weight: bold; width: 99%; border-style: solid; border-width: 1; border-color: black }
 h2        { font-size: 4em; line-height: .5em }
 h3        { font-size: 2em; line-height: .5em }
 td        { vertical-align: text-top }
+.blurb    { font-size: 1.3em; line-height: 1em }
     </style> 
   </head>
   <body style="background: #003556; height: 95%; color: white; margin: 0px; font-family: arial, helvetica, sans-serif !important;">
 
-    <div style="margin: auto; width: 900px; padding: 70px 0;">
+    <div style="margin: auto; width: 900px; padding: 70px 0 30px">
       <img src="eucalyptus-logo-rev.png" alt="Eucalyptus"/>
       <br/>
       [<a href="https://docs.eucalyptuscloud.org/">documentation</a>]
@@ -29,16 +31,17 @@ td        { vertical-align: text-top }
       <br/>
       <br/>
 
-      <p>Eucalyptus is open source software for building AWS-compatible private clouds.</p>
+      <p class="blurb">Eucalyptus is open source software for building AWS-compatible private clouds.</p>
 
-      <p>As an Infrastructure as a Service (IaaS) product, Eucalyptus allows your users 
+      <p class="blurb">As an Infrastructure as a Service (IaaS) product, Eucalyptus allows your users 
          to provision your compute and storage resources on-demand.</p>
-
+    </div>
+    <div style="margin: auto; width: 900px; padding: 0 0 70px">
        <h2>APIs</h2>
        
        <table>
          <tr><td style="padding-right: 40px"><h3>Compute</h3>
-         <p>Run instances with <b>EC2</b> and <b>AutoScaling</b>/<b>ELB</b>.</p>
+         <p>Run instances with <b>EC2</b> and <b>AutoScaling</b> / <b>ELB</b>.</p>
          </td>
          <td><h3>Storage</h3>
          <p>Use <b>S3</b> storage to share data and <b>EBS</b> for persistent instance state.</p>
@@ -58,7 +61,7 @@ td        { vertical-align: text-top }
 
         <p>Try Eucalyptus with a FastStart install by running:</p> 
 
-        <pre>
+        <pre class="sup">
 
 
 bash <(curl -Ls https://eucalyptuscloud.org/install)
@@ -67,7 +70,14 @@ bash <(curl -Ls https://eucalyptuscloud.org/install)
 
         <p>as root, on a CentOS 7.3/4 minimal install with a few IP addresses to spare.</p>
 
-        <p>Or for a production install, follow the <a href="https://docs.eucalyptuscloud.org/eucalyptus/4.4.2/index.html#shared/install_section.html" class="dark">installation guide</a></p>.
+        <p>For a production install, follow the <a href="https://docs.eucalyptuscloud.org/eucalyptus/4.4.2/index.html#shared/install_section.html" class="dark">installation guide</a>,
+           but use these Eucalyptus and Euca2ools release packages for the latest rpms:</p>
+
+        <pre class="sub">
+
+  yum install https://downloads.eucalyptuscloud.org/software/euca2ools/3.4/rhel/7/x86_64/euca2ools-release-3.4-2.1.as.el7.noarch.rpm
+  yum install https://downloads.eucalyptuscloud.org/software/eucalyptus/4.4/rhel/7/x86_64/eucalyptus-release-4.4-2.6.as.el7.noarch.rpm
+        </pre>
       </div>
     </div>
 
