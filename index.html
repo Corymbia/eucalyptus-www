@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="/eucalyptus.ico"/>
+    <link rel="icon" href="assets/eucalyptus.ico"/>
+    <link rel="stylesheet" href="assets/font-logos.css" >
     <title>Eucalyptus Cloud</title>
     <style>
-a:link    { color: white; }
-a:visited { color: white; }
-a:hover   { color: white; }
-a:active  { color: white; } 
-a.dark:link    { color: #003556; }
-a.dark:visited { color: #003556; }
-a.dark:hover   { color: #003556; }
-a.dark:active  { color: #003556; } 
-pre.sup   { color: #b0b0b0; background: #0f0f0f; font-size: 1.5em; text-align: center; width: 99%; border-style: solid; border-width: 1; border-color: #99cc33 }
-pre.sub   { color: black; background: #c0c0c0; font-size: .8em; font-weight: bold; width: 99%; border-style: solid; border-width: 1; border-color: black }
-h2        { font-size: 4em; line-height: .5em }
+a:link    { color: white }
+a:visited { color: white }
+a:hover   { color: white }
+a:active  { color: white } 
+a.dark:link    { color: #003556 }
+a.dark:visited { color: #003556 }
+a.dark:hover   { color: #003556 }
+a.dark:active  { color: #003556 } 
+pre.sup   { color: #003556; background: #c7c6bd; font-size: 1.7em; text-align: center; width: 99% }
+pre.sub   { color: #003556; background: #c7c6bd; font-size: .85em; font-weight: bold; width: 99% }
+h2        { font-size: 4em; line-height: .6em; text-align: center; margin-bottom: 24px }
 h3        { font-size: 2em; line-height: .5em }
 td        { vertical-align: text-top }
 .blurb    { font-size: 1.3em; line-height: 1em }
+.nav      { margin: auto; width: 900px; text-align: right; padding: 3px }
+a.nav     { text-decoration: none; font-weight: bold; font-size: .8em }
+a.nav:hover { text-decoration: underline }
+a.raw     { text-decoration: none }
+a.raw:hover { text-decoration: underline }
+#platform-centos {
+    width: 50px;
+    height: 50px;
+    background: url(platform-icons.png) 0 -200px;
+}
+#platform-fedora {
+    width: 50px;
+    height: 50px;
+    background: url(platform-icons.png) 0 -50px;
+}
+#platform-ubuntu {
+    width: 50px;
+    height: 50px;
+    background: url(platform-icons.png) 0 -150px;
+}
     </style> 
   </head>
   <body style="background: #003556; height: 95%; color: white; margin: 0px; font-family: arial, helvetica, sans-serif !important;">
+    <div class="nav">
+      <a class="nav" href="#faststart">DOWNLOAD</a>
+      <a class="nav" href="https://docs.eucalyptus.cloud/">DOCUMENTATION</a>
+      <a class="nav" href="#images">IMAGES</a>
+      <a class="nav" href="#community">COMMUNITY</a>
+    </div>
 
-    <div style="margin: auto; width: 900px; padding: 70px 0 30px">
-      <img src="eucalyptus-logo-rev.png" alt="Eucalyptus"/>
+    <div style="margin: auto; width: 900px; padding: 40px 0 30px">
+
+      <img src="assets/eucalyptus-logo-rev.png" alt="Eucalyptus"/>
       <br/>
-      [<a href="https://docs.eucalyptus.cloud/">documentation</a>]
-      [<a href="https://github.com/corymbia/eucalyptus/issues">issues</a>]
-      [<a href="https://github.com/corymbia/eucalyptus">source</a>]
       <br/>
       <br/>
 
-      <p class="blurb">Eucalyptus is open source software for building AWS-compatible private clouds.</p>
+      <p class="blurb">Eucalyptus is open source software for building AWS-compatible private and hybrid clouds.</p>
 
       <p class="blurb">As an Infrastructure as a Service (IaaS) product, Eucalyptus allows your users 
          to provision your compute and storage resources on-demand.</p>
     </div>
     <div style="margin: auto; width: 900px; padding: 0 0 70px">
        <h2>APIs</h2>
+       <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
        
        <table>
-         <tr><td style="padding-right: 40px"><h3>Compute</h3>
+         <tr><td style="width: 50%; padding-right: 40px"><h3>Compute</h3>
          <p>Run instances with <b>EC2</b> and <b>AutoScaling</b> / <b>ELB</b>.</p>
          </td>
          <td><h3>Storage</h3>
@@ -55,9 +81,11 @@ td        { vertical-align: text-top }
        </table>
     </div>
 
-    <div style="background: #c0c0c0; color: #0c0c0c">
+    <div style="background: #e0e0e0; color: #003556">
       <div style="margin: auto; width: 900px; padding: 70px 0;">
-        <h2>FastStart</h2>
+        <a id="faststart"></a>        
+        <h2 style="color: #003556">FastStart</h2>
+        <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
 
         <p>Try Eucalyptus with a FastStart install by running:</p> 
 
@@ -81,22 +109,90 @@ bash <(curl -Ls https://eucalyptus.cloud/install)
       </div>
     </div>
 
-    <div style="margin: auto; width: 900px; padding: 70px 0;">
-       <h2>Community</h2>
+    <div style="background: #75756c">
+      <div style="margin: auto; width: 900px; padding: 70px 0;">
+        <a id="images"></a>        
+        <h2>Images</h2>
+        <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
 
-       <table>
-         <tr><td style="padding-right: 40px"><h3>Discuss</h3>
-         <p>Chat on the eucalyptus <a href="http://webchat.freenode.net/?channels=eucalyptus" target="_blank">IRC</a> channel, or
-         ask questions on <a href="https://stackoverflow.com/questions/tagged/eucalyptus" target="_blank">Stack Overflow</a></p>
-         </td>
-         <td><h3>Contribute</h3>
-         <p>Get the <a href="https://github.com/corymbia/eucalyptus" target="_blank">source</a>, or submit an 
-         <a href="https://github.com/corymbia/eucalyptus/issues" target="_blank">issue</a> on GitHub. </p>
-         </td></tr>
-       </table>
+        <h3>Install</h3>
+        <p>Quickly install images for your Eucalyptus cloud by running:</p> 
+        
+        <pre class="sup">
+
+
+python <(curl -Ls https://eucalyptus.cloud/images)
+
+        </pre>
+
+        <h3>Download</h3>
+        <p>Fetch and upload images to your Eucalyptus cloud(s):</p>
+        <br/>
+        
+		<table cellpadding="16" cellspacing="0">
+		  <tr>
+		    <td style="color: #003556; background: #c7c6bd"><i class="fl-centos fl-60"></td>
+		    <td style="vertical-align: top">
+		      <span style="font-size: 1.2em; font-weight: bold">CentOS and CentOS Atomic Host</span><br/>
+		      From <a href="https://cloud.centos.org/" class="raw">cloud.centos.org</a>
+		    </td>
+		  </tr>
+
+		  <tr>
+		    <td style="color: #003556; background: #c7c6bd"><i class="fl-coreos fl-60"></td>
+		    <td style="vertical-align: top">
+		      <span style="font-size: 1.2em; font-weight: bold">CoreOS Container Linux</span><br/>
+		      From <a href="https://coreos.com/releases/" class="raw">coreos.com/releases</a>
+		    </td>
+		  </tr>
+
+		  <tr>
+		    <td style="color: #003556; background: #c7c6bd"><i class="fl-fedora fl-60"></i></td>
+		    <td style="vertical-align: top">
+		      <span style="font-size: 1.2em; font-weight: bold">Fedora and Fedora Atomic Host</span><br/>
+		      Fedora from <a href="https://alt.fedoraproject.org/cloud/" class="raw">alt.fedoraproject.org/cloud</a><br/>
+		      Fedora Atomic Host from <a href="https://getfedora.org/en/atomic/download/" class="raw">getfedora.org/en/atomic/download</a>
+		    </td>
+		  </tr>
+
+		  <tr>
+		    <td style="color: #003556; background: #c7c6bd"><i class="fl-ubuntu-inverse fl-60"></i></td>
+		    <td style="vertical-align: top">
+		      <span style="font-size: 1.2em; font-weight: bold">Ubuntu</span><br/>
+		      From <a href="https://cloud-images.ubuntu.com/" class="raw">cloud-images.ubuntu.com</a>
+		    </td>
+		  </tr>		  
+		</table>
+
+        <br/>
+        <p>by following the <a href="http://docs.eucalyptus.cloud/eucalyptus/4.4.2/index.html#image-guide/img_concept_understanding_images.html">image guide</a>, 
+        for <a href="http://docs.eucalyptus.cloud/eucalyptus/4.4.2/index.html#image-guide/img_task_install_hvm_image.html">installing an HVM image</a>.</p>
+      </div>
     </div>
 
-    <div style="background: #c0c0c0; color: #0c0c0c; margin: 0px; padding: 0px; border: 0px">
+    <div style="margin: auto; width: 900px; padding: 70px 0;">
+       <a id="community"></a>        
+       <h2>Community</h2>
+       <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
+
+       <table>
+         <tr>
+           <td style="padding-right: 40px">
+             <h3>Discuss</h3>
+             <p>Chat on the eucalyptus <a href="http://webchat.freenode.net/?channels=eucalyptus" target="_blank">IRC</a> channel, or
+             ask questions on <a href="https://stackoverflow.com/questions/tagged/eucalyptus" target="_blank">Stack Overflow</a></p>
+           </td>
+           <td>
+             <h3>Contribute</h3>
+             <p>Get the <a href="https://github.com/corymbia/eucalyptus" target="_blank">source</a>, or submit an 
+             <a href="https://github.com/corymbia/eucalyptus/issues" target="_blank">issue</a> on GitHub. </p>
+           </td>
+         </tr>
+       </table>
+
+    </div>
+
+    <div style="background: #c7c6bd; color: #0c0c0c; margin: 0px; padding: 0px; border: 0px">
       <div style="margin: auto; width: 900px; padding-right: 70px 0;">
         <div style="text-align: right; font-size: 0.8em; line-height: 2em">&copy; Copyright 2018 Eucalyptus Cloud</div>
       </div>
