@@ -10,6 +10,7 @@
     </script>
     <link rel="icon" href="assets/eucalyptus.ico"/>
     <link rel="stylesheet" href="assets/font-logos.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <title>Eucalyptus Cloud</title>
     <style>
 a:link    { color: white }
@@ -20,14 +21,14 @@ a.dark:link    { color: #003556 }
 a.dark:visited { color: #003556 }
 a.dark:hover   { color: #003556 }
 a.dark:active  { color: #003556 } 
-pre.sup   { color: #003556; background: #c7c6bd; font-size: 1.7em; text-align: center; width: 99% }
-pre.sub   { color: #003556; background: #c7c6bd; font-size: .85em; font-weight: bold; width: 99% }
+pre.sup   { color: #003556; background: #c7c6bd; border-radius: 20px; font-size: 1.7em; text-align: center; width: 99% }
+pre.sub   { color: #003556; background: #c7c6bd; border-radius: 20px; font-size: .85em; font-weight: bold; width: 99% }
 h2        { font-size: 4em; line-height: .6em; text-align: center; margin-bottom: 24px }
 h3        { font-size: 2em; line-height: .5em }
 td        { vertical-align: text-top }
-.blurb    { font-size: 1.3em; line-height: 1em }
+.blurb    { font-size: 1.5em; line-height: 1.1em }
 .nav      { margin: auto; width: 900px; text-align: right; padding: 3px }
-a.nav     { text-decoration: none; font-weight: bold; font-size: .8em }
+a.nav     { text-decoration: none; font-weight: bold; font-size: 1em; color: #003556 }
 a.nav:hover { text-decoration: underline }
 a.raw     { text-decoration: none }
 a.raw:hover { text-decoration: underline }
@@ -49,11 +50,12 @@ a.raw:hover { text-decoration: underline }
     </style> 
   </head>
   <body style="background: #003556; height: 95%; color: white; margin: 0px; font-family: arial, helvetica, sans-serif !important;">
-    <div class="nav">
-      <a class="nav" href="#faststart">DOWNLOAD</a>
-      <a class="nav" href="https://docs.eucalyptus.cloud/">DOCUMENTATION</a>
-      <a class="nav" href="#images">IMAGES</a>
-      <a class="nav" href="#community">COMMUNITY</a>
+    <div style="background: white; color: black">
+		<div class="nav">
+		  <a class="nav" href="https://blog.eucalyptus.cloud/">BLOG <i class="fas fa-fw fa-rss"></i></a>
+		  <a class="nav" href="https://docs.eucalyptus.cloud/">DOCS <i class="fas fa-fw fa-book"></i></a>
+		  <a class="nav" href="https://github.com/Corymbia/eucalyptus">CODE <i class="fab fa-fw fa-github"></i></a>
+		</div>
     </div>
 
     <div style="margin: auto; width: 900px; padding: 40px 0 30px">
@@ -67,7 +69,25 @@ a.raw:hover { text-decoration: underline }
 
       <p class="blurb">As an Infrastructure as a Service (IaaS) product, Eucalyptus allows your users 
          to provision your compute and storage resources on-demand.</p>
+
+      <br/>
+
+      <div style="color: #003556; background: white; padding: 20px; border-radius: 20px; font-size: 2em; align: center; text-align: center; width: 99%">
+        <table width="80%" style="margin: auto">
+        <tr>
+          <td><a class="dark" href="#faststart"><i class="fas fa-cloud-download-alt fa-3x"></i></a></td>
+          <td><a class="dark" href="#images"><i class="fab fa-linux fa-3x"></i></a></td>
+          <td><a class="dark" href="#community"><i class="fas fa-users fa-3x"></i></a></td>
+        </tr>
+        <tr>
+          <td><a class="dark raw" href="#faststart">FastStart</a></td>
+          <td><a class="dark raw" href="#images">Images</a></td>
+          <td><a class="dark raw" href="#community">Community</a></td>
+        </tr>
+        </table>
+      </div>
     </div>
+
     <div style="margin: auto; width: 900px; padding: 0 0 70px">
        <h2>APIs</h2>
        <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
@@ -105,14 +125,7 @@ bash <(curl -Ls https://eucalyptus.cloud/install)
 
         <p>as root, on a CentOS 7.3/4 minimal install with a few IP addresses to spare.</p>
 
-        <p>For a production install, follow the <a href="https://docs.eucalyptus.cloud/eucalyptus/4.4.3/index.html#shared/install_section.html" class="dark">installation guide</a>,
-           making sure to use the new Eucalyptus and Euca2ools release packages to get the latest rpms:</p>
-
-        <pre class="sub">
-
-  yum install https://downloads.eucalyptus.cloud/software/euca2ools/3.4/rhel/7/x86_64/euca2ools-release-3.4-2.2.as.el7.noarch.rpm
-  yum install https://downloads.eucalyptus.cloud/software/eucalyptus/4.4/rhel/7/x86_64/eucalyptus-release-4.4-2.8.as.el7.noarch.rpm
-        </pre>
+        <p>For a production install, follow the <a href="https://docs.eucalyptus.cloud/eucalyptus/4.4.3/index.html#shared/install_section.html" class="dark">installation guide</a>.</p>
       </div>
     </div>
 
@@ -138,7 +151,7 @@ python <(curl -Ls https://eucalyptus.cloud/images)
         
 		<table cellpadding="16" cellspacing="0">
 		  <tr>
-		    <td style="color: #003556; background: #c7c6bd"><i class="fl-centos fl-60"></td>
+		    <td style="color: #003556; background: #c7c6bd; border-radius: 20px 20px 0px 0px"><i class="fl-centos fl-60"></td>
 		    <td style="vertical-align: top">
 		      <span style="font-size: 1.2em; font-weight: bold">CentOS and CentOS Atomic Host</span><br/>
 		      From <a href="https://cloud.centos.org/" class="raw">cloud.centos.org</a>
@@ -163,7 +176,7 @@ python <(curl -Ls https://eucalyptus.cloud/images)
 		  </tr>
 
 		  <tr>
-		    <td style="color: #003556; background: #c7c6bd"><i class="fl-ubuntu-inverse fl-60"></i></td>
+		    <td style="color: #003556; background: #c7c6bd; border-radius: 0px 0px 20px 20px"><i class="fl-ubuntu-inverse fl-60"></i></td>
 		    <td style="vertical-align: top">
 		      <span style="font-size: 1.2em; font-weight: bold">Ubuntu</span><br/>
 		      From <a href="https://cloud-images.ubuntu.com/" class="raw">cloud-images.ubuntu.com</a>
