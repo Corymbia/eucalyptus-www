@@ -1,0 +1,92 @@
+/**** header css ****/
+body {font-size: 14px; color: #3c3c3b; font-family: roboto-regular;}
+a, button{transition: all 0.3s;}
+a:hover, button:hover {text-decoration: none; transition: all 0.3s;}
+:focus, button:focus {outline: none;}
+ul, ol {margin: 0px; padding: 0px;}
+h4 {font-size: 26px; margin: 0px 0px 18px; padding: 0px; font-weight: bold;}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(../fonts/roboto-regular.eot);
+    src:url(../fonts/roboto-regular.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/roboto-regular.woff2) format("woff2"),
+        url(../fonts/roboto-regular.woff) format("woff"),
+        url(../fonts/roboto-regular.ttf) format("truetype"),
+        url(../fonts/roboto-regular.svg#wf) format("svg");
+}
+@font-face {
+    font-family: conthrax-sb;
+    src: url(../fonts/conthrax-sb.eot);
+    src:url(../fonts/conthrax-sb.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/conthrax-sb.woff2) format("woff2"),
+        url(../fonts/conthrax-sb.woff) format("woff"),
+        url(../fonts/conthrax-sb.ttf) format("truetype"),
+        url(../fonts/conthrax-sb.svg#wf) format("svg");
+}
+header {background: #003556 url(../img/headerbg.jpg) right top no-repeat; min-height: 543px; padding-top: 30px;}
+header .logo {display: inline-block;}
+header .logo img {max-width: 100%;}
+.navb {float: right; list-style: none;}
+.navb li {float: left; margin-left: 25px;}
+.navb li a {display: inline-block; color: #ffffff; font-size: 14px;}
+.navb li a:hover {opacity: 0.6;}
+.textco {color: #c1d0d7; font-size: 27px; padding-top: 105px; font-weight: 600;}
+.banner2 {background: #8bc13a; padding: 40px 0px; text-align: center;}
+.banner2 .container {max-width: 1000px; width: 100%;  font-size: 28px; font-weight: bold; color: #ffffff;}
+.banner2 .container img {padding-right: 5px; display: inline-block;}
+.banner2 .container a {color: #ffffff}
+.banner3 {padding: 100px 0px; background: #ffffff;}
+.banner3 h3 {text-align: center; font-size: 38px; color: #003556; font-weight: bold;}
+.sev_box {margin-top: 108px; border: solid 2px #8bc13a; text-align: center; padding: 15px 10px; min-height: 254px; line-height: 25px;}
+.sev_box strong {font-size: 24px; color: #283945; padding-top: 33px; display: block;}
+.sev_box p {color: #666666; font-size: 20px;}
+.sev_box p b{color: #000;}
+.sev_box .imgbox {position: relative; text-align: center;}
+.sev_box .imgbox img {margin-top: -76px; position: relative; z-index: 3;}
+.banner4 {background: #f5f5f5; padding: 100px 0px;}
+.grbox h3 {font-size: 26px; color: #333333; font-weight: bold;}
+.grbox span {background: #8bc13a; border-radius: 5px; font-size: 26px; color: #ffffff; text-align: center; padding: 25px 15px; display: block; margin: 45px 0px;}
+.grbox p {font-size: 20px; color: #333333; font-weight: bold;}
+.grbox p a {color: #8bc13a; text-decoration: none;}
+.imgboxs {margin-top: -157px;}
+.banner5 {background: #ffffff; padding: 100px 0px;}
+.grbox h3 strong {color: #8bc13a; display: block; text-transform: uppercase;}
+.serverbox {position: relative; padding: 0px 0px 0px 105px; margin-top: 40px;}
+.serverbox img {position: absolute; left: 0px; top: 0px;}
+.serverbox h4 {color: #003556; font-size: 20px; font-weight: bold;   margin: 0px;  padding-top: 16px;}
+.serverbox p {font-size: 17px; color: #666666;}
+.serverbox ul {margin-left: 20px;}
+.serverbox ul li {font-size: 18px; color: #666666;}
+.linkbox {color: #666666;}
+.mrto {margin-top: 40px;}
+.bubox {font-size: 20px; color: #666666; font-weight: bold; margin-top: 40px;}
+.bubox a {color: #8bc13a; text-decoration: none;}
+.serverbox.secondb {padding: 0px 0px 0px 147px; margin: 0px;}
+.serverbox.secondb h4 {color: #003556; font-size: 26px;}
+.serverbox.secondb p{font-size: 20px; color: #666666;}
+.serverbox.secondb a {color: #8bc13a;}
+.serverbox.secondb img {top: -11px;}
+.serverbox.secondb.mrtopa {margin-top: 50px;}
+.footerse {background: #003556; padding: 40px 0px; text-align: center;}
+.footerse .navb {float: none; display: inline-block;}
+.footerse .navb li {margin-top: 20px; margin-left: 0px;}
+.footerse .navb li a {padding: 10px 29px;}
+.copyright {color: #333333; font-size: 15px; background: #ffffff; padding: 15px; text-transform: uppercase; text-align: center;}
+.floatleft {float: right;}
+.diply {display: block;}
+
+@media only screen and (max-width: 768px) {
+   .banner2 .container {font-size: 18px;}
+   .banner2 .container img {max-width: 100%;}
+   header .logo {display: block; text-align: center;}
+   header {text-align: center;}
+   .navb {float: none; text-align: center; display: inline-block;}
+   .navb li {margin-left: 0px; margin-top: 15px;}
+   .textco {padding-top: 86px;}
+   .banner3 {padding: 50px 0px 100px;}
+   .imgboxs {text-align: center; margin-bottom: 25px;}
+   .grbox span {font-size: 16px;}
+   .serverbox ul { word-break: break-all;}
+   .footerse .navb li a {padding: 10px 8px;}
+}
