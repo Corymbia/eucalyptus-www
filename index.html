@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118276181-1"></script>
     <script>
@@ -8,216 +8,285 @@
       gtag('js', new Date());
       gtag('config', 'UA-118276181-1');
     </script>
-    <link rel="icon" href="assets/eucalyptus.ico"/>
-    <link rel="stylesheet" href="assets/font-logos.css" >
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <title>Eucalyptus Cloud</title>
-    <style>
-a:link    { color: white }
-a:visited { color: white }
-a:hover   { color: white }
-a:active  { color: white } 
-a.dark:link    { color: #003556 }
-a.dark:visited { color: #003556 }
-a.dark:hover   { color: #003556 }
-a.dark:active  { color: #003556 } 
-pre.sup   { color: #003556; background: #c7c6bd; border-radius: 20px; font-size: 1.7em; text-align: center; width: 99% }
-pre.sub   { color: #003556; background: #c7c6bd; border-radius: 20px; font-size: .85em; font-weight: bold; width: 99% }
-h2        { font-size: 4em; line-height: .6em; text-align: center; margin-bottom: 24px }
-h3        { font-size: 2em; line-height: .5em }
-td        { vertical-align: text-top }
-.blurb    { font-size: 1.5em; line-height: 1.1em }
-.nav      { margin: auto; width: 900px; text-align: right; padding: 3px }
-a.nav     { text-decoration: none; font-weight: bold; font-size: 1em; color: #003556 }
-a.nav:hover { text-decoration: underline }
-a.raw     { text-decoration: none }
-a.raw:hover { text-decoration: underline }
-#platform-centos {
-    width: 50px;
-    height: 50px;
-    background: url(platform-icons.png) 0 -200px;
-}
-#platform-fedora {
-    width: 50px;
-    height: 50px;
-    background: url(platform-icons.png) 0 -50px;
-}
-#platform-ubuntu {
-    width: 50px;
-    height: 50px;
-    background: url(platform-icons.png) 0 -150px;
-}
-    </style> 
+    <link rel="icon" href="img/eucalyptus.ico"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eucalyptus</title>
+
+    <!-- CSS start here -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- CSS end here -->
   </head>
-  <body style="background: #003556; height: 95%; color: white; margin: 0px; font-family: arial, helvetica, sans-serif !important;">
-    <div style="background: white; color: black">
-		<div class="nav">
-		  <a class="nav" href="https://blog.eucalyptus.cloud/">BLOG <i class="fas fa-fw fa-rss"></i></a>
-		  <a class="nav" href="https://docs.eucalyptus.cloud/">DOCS <i class="fas fa-fw fa-book"></i></a>
-		  <a class="nav" href="https://github.com/Corymbia/eucalyptus">CODE <i class="fab fa-fw fa-github"></i></a>
-		</div>
-    </div>
 
-    <div style="margin: auto; width: 900px; padding: 40px 0 30px">
+<body>
+<!-- header start here -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" />
+        </a>
+      </div>
+      <div class="col-12 col-lg-6">
+        <ul class="navb">
+          <li>
+            <a href="https://blog.eucalyptus.cloud/" target="_blank">
+              <img src="img/icon1.png">
+              BLOG
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.eucalyptus.cloud/" target="_blank">
+              <img src="img/icon2.png">
+              DOCS
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Corymbia/eucalyptus" target="_blank">
+              <img src="img/icon3.png">
+              CODE
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-7">
+        <p class="textco">Eucalyptus is open source software for building
+          AWS-compatible private and hybrid clouds. <br > <br >
 
-      <img src="assets/eucalyptus-logo-rev.png" alt="Eucalyptus"/>
-      <br/>
-      <br/>
-      <br/>
-
-      <p class="blurb">Eucalyptus is open source software for building AWS-compatible private and hybrid clouds.</p>
-
-      <p class="blurb">As an Infrastructure as a Service (IaaS) product, Eucalyptus allows your users 
-         to provision your compute and storage resources on-demand.</p>
-
-      <br/>
-
-      <div style="color: #003556; background: white; padding: 20px; border-radius: 20px; font-size: 2em; align: center; text-align: center; width: 99%">
-        <table width="80%" style="margin: auto">
-        <tr>
-          <td><a class="dark" href="#faststart"><i class="fas fa-cloud-download-alt fa-3x"></i></a></td>
-          <td><a class="dark" href="#images"><i class="fab fa-linux fa-3x"></i></a></td>
-          <td><a class="dark" href="#community"><i class="fas fa-users fa-3x"></i></a></td>
-        </tr>
-        <tr>
-          <td><a class="dark raw" href="#faststart">FastStart</a></td>
-          <td><a class="dark raw" href="#images">Images</a></td>
-          <td><a class="dark raw" href="#community">Community</a></td>
-        </tr>
-        </table>
+          As an Infrastructure as a Service (IaaS) product,
+          Eucalyptus allows your users to provision your
+          compute and storage resources on-demand.</p>
       </div>
     </div>
-
-    <div style="margin: auto; width: 900px; padding: 0 0 70px">
-       <h2>APIs</h2>
-       <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
-       
-       <table>
-         <tr><td style="width: 50%; padding-right: 40px"><h3>Compute</h3>
-         <p>Run instances with <b>EC2</b> and <b>AutoScaling</b> / <b>ELB</b>.</p>
-         </td>
-         <td><h3>Storage</h3>
-         <p>Use <b>S3</b> storage to share data and <b>EBS</b> for persistent instance state.</p>
-         </td></tr>
-         <tr><td style="padding-right: 40px"><h3>Management</h3>
-         <p>Use <b>IAM</b> to manage users and control access, and <b>Cloud Formation</b> to manage resources.</p> 
-         </td>
-         <td><h3>Monitoring</h3>
-         <p>Use <b>CloudWatch</b> to monitor your compute resources.</p>
-         </td></tr>
-       </table>
-    </div>
-
-    <div style="background: #e0e0e0; color: #003556">
-      <div style="margin: auto; width: 900px; padding: 70px 0;">
-        <a id="faststart"></a>        
-        <h2 style="color: #003556">FastStart</h2>
-        <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
-
-        <p>Try Eucalyptus with a FastStart install by running:</p> 
-
-        <pre class="sup">
-
-
-bash <(curl -Ls https://eucalyptus.cloud/install)
-
-        </pre>
-
-        <p>as root, on a CentOS 7.5 minimal install with a few IP addresses to spare (CentOS 7.3/7.4 minimal may be used)</p>
-
-        <p>For a production install, follow the <a href="https://docs.eucalyptus.cloud/eucalyptus/4.4.4/index.html#shared/install_section.html" class="dark">installation guide</a>.</p>
+  </div>
+</header>
+<!-- header end here -->
+<!-- container start here -->
+<section class="banner2">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+       <a href="#faststar"><img src="img/icon4.png" />
+        FastStart</a>
+      </div>
+      <div class="col-4">
+        <a href="#Images"><img src="img/icon5.png" />
+        Images</a>
+      </div>
+      <div class="col-4">
+        <a href="#Community"><img src="img/icon5.png" />
+        Community</a>
       </div>
     </div>
-
-    <div style="background: #75756c">
-      <div style="margin: auto; width: 900px; padding: 70px 0;">
-        <a id="images"></a>        
-        <h2>Images</h2>
-        <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
-
-        <h3>Install</h3>
-        <p>Quickly install images for your Eucalyptus cloud by running:</p> 
-        
-        <pre class="sup">
-
-
-python <(curl -Ls https://eucalyptus.cloud/images)
-
-        </pre>
-
-        <h3>Download</h3>
-        <p>Fetch and upload images to your Eucalyptus cloud(s):</p>
-        <br/>
-        
-		<table cellpadding="16" cellspacing="0">
-		  <tr>
-		    <td style="color: #003556; background: #c7c6bd; border-radius: 20px 20px 0px 0px"><i class="fl-centos fl-60"></td>
-		    <td style="vertical-align: top">
-		      <span style="font-size: 1.2em; font-weight: bold">CentOS and CentOS Atomic Host</span><br/>
-		      From <a href="https://cloud.centos.org/" class="raw">cloud.centos.org</a>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td style="color: #003556; background: #c7c6bd"><i class="fl-coreos fl-60"></td>
-		    <td style="vertical-align: top">
-		      <span style="font-size: 1.2em; font-weight: bold">CoreOS Container Linux</span><br/>
-		      From <a href="https://coreos.com/releases/" class="raw">coreos.com/releases</a>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td style="color: #003556; background: #c7c6bd"><i class="fl-fedora fl-60"></i></td>
-		    <td style="vertical-align: top">
-		      <span style="font-size: 1.2em; font-weight: bold">Fedora and Fedora Atomic Host</span><br/>
-		      Fedora from <a href="https://alt.fedoraproject.org/cloud/" class="raw">alt.fedoraproject.org/cloud</a><br/>
-		      Fedora Atomic Host from <a href="https://getfedora.org/en/atomic/download/" class="raw">getfedora.org/en/atomic/download</a>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td style="color: #003556; background: #c7c6bd; border-radius: 0px 0px 20px 20px"><i class="fl-ubuntu-inverse fl-60"></i></td>
-		    <td style="vertical-align: top">
-		      <span style="font-size: 1.2em; font-weight: bold">Ubuntu</span><br/>
-		      From <a href="https://cloud-images.ubuntu.com/" class="raw">cloud-images.ubuntu.com</a>
-		    </td>
-		  </tr>		  
-		</table>
-
-        <br/>
-        <p>by following the <a href="http://docs.eucalyptus.cloud/eucalyptus/4.4.4/index.html#image-guide/img_concept_understanding_images.html">image guide</a>,
-        for <a href="http://docs.eucalyptus.cloud/eucalyptus/4.4.4/index.html#image-guide/img_task_install_hvm_image.html">installing an HVM image</a>.</p>
+  </div>
+</section>
+<section class="banner3">
+  <div class="container">
+    <h3>APIs</h3>
+    <div class="row">
+      <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="sev_box">
+          <div class="imgbox">
+            <img src="img/icon7.png" />
+          </div>
+          <strong>Compute</strong>
+          <p>Run instances with <b>EC2</b> and <b>Auto Scaling / ELB.</b></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="sev_box">
+          <div class="imgbox">
+            <img src="img/icon8.png" />
+          </div>
+          <strong>Storage</strong>
+          <p>Use <b>S3</b> storage to share data and <b>EBS</b> for persistent instance state.</b></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="sev_box">
+          <div class="imgbox">
+            <img src="img/icon9.png" />
+          </div>
+          <strong>Management</strong>
+          <p>Use <b>IAM</b> to manage users and control access, and <b>Cloud Formation</b> to manage resources.</b></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="sev_box">
+          <div class="imgbox">
+            <img src="img/icon10.png" />
+          </div>
+          <strong>Monitoring</strong>
+          <p>Use <b>CloudWatch</b> to monitor your compute resources.</b></p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="banner4" id="faststar">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="imgboxs">
+          <img src="img/icon11.png" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="grbox">
+          <h3>Try Eucalyptus with a FastStart install by running:</h3>
+          <span>bash <(curl -Ls https://eucalyptus.cloud/install)</span>
+          <p>as root, on a CentOS 7.5 minimal install with a few IP addresses to spare
+          (CentOS 7.3/7.4 minimal may be used) <br /><br />
 
-    <div style="margin: auto; width: 900px; padding: 70px 0;">
-       <a id="community"></a>        
-       <h2>Community</h2>
-       <div style="margin: auto; padding-top: 0; border-style: solid; border-width: 10px 0px 0px 0px; border-color: #99cc33; width: 100px">&nbsp;</div>
-
-       <table>
-         <tr>
-           <td style="padding-right: 40px">
-             <h3>Discuss</h3>
-             <p>Chat on the eucalyptus <a href="http://webchat.freenode.net/?channels=eucalyptus" target="_blank">IRC</a> channel, or
-             ask questions on <a href="https://stackoverflow.com/questions/tagged/eucalyptus" target="_blank">Stack Overflow</a></p>
-           </td>
-           <td>
-             <h3>Contribute</h3>
-             <p>Get the <a href="https://github.com/corymbia/eucalyptus" target="_blank">source</a>, or submit an 
-             <a href="https://github.com/corymbia/eucalyptus/issues" target="_blank">issue</a> on GitHub. </p>
-           </td>
-         </tr>
-       </table>
-
-    </div>
-
-    <div style="background: #c7c6bd; color: #0c0c0c; margin: 0px; padding: 0px; border: 0px">
-      <div style="margin: auto; width: 900px; padding-right: 70px 0;">
-        <div style="text-align: right; font-size: 0.8em; line-height: 2em">&copy; Copyright 2018 Eucalyptus Cloud</div>
+          For a production install, follow the <a href="https://docs.eucalyptus.cloud/eucalyptus/4.4.4/index.html#shared/install_section.html" target="_blank">installation guide.</a> </p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="banner5" id="Images">
+  <div class="container">
+    <div class="row diply">
+      <div class="col-12 col-md-4 col-lg-4 col-xl-4 floatleft">
+        <div class="imgboxs">
+          <img src="img/icon12.png" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="grbox">
+          <h3>
+            <strong>install</strong>
+          Quickly install images for your Eucalyptus cloud by running:</h3>
+          <span>python <(curl -Ls https://eucalyptus.cloud/images)</span>
 
-  </body>
+        </div>
+      </div>
+    </div>
+    <div class="grbox mrto">
+      <h3>
+        <strong>DOWNLOAD</strong>
+      Fetch and upload images to your Eucalyptus cloud(s):</h3>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="serverbox">
+          <img src="img/icons1.png" />
+          <h4>CentOS and CentOS Atomic Host</h4>
+          <p>From <a href="https://cloud.centos.org/" target="_blank" class="linkbox"> cloud.centos.org </a></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="serverbox">
+          <img src="img/icons2.png" />
+          <h4>CoreOS Container Linux</h4>
+          <p>From <a href="https://coreos.com/releases/" target="_blank"  class="linkbox">coreos.com/releases</a></p>
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="serverbox">
+          <img src="img/icons3.png" />
+          <h4>Fedora and Fedora Atomic Host</h4>
+          <ul>
+            <li> Fedora from <br /><a href="https://alt.fedoraproject.org/cloud/" target="_blank"  class="linkbox"> alt.fedoraproject.org/cloud </a></li>
+            <li>Fedora Atomic Host from <br /> <a href="https://getfedora.org/en/atomic/download/" target="_blank" class="linkbox"> getfedora.org/en/atomic/download</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="serverbox">
+          <img src="img/icons4.png" />
+          <h4>Ubuntu</h4>
+          <p>
+            From <a href="https://cloud-images.ubuntu.com/" target="_blank" class="linkbox"> cloud-images.ubuntu.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bubox">by following the <a href="http://docs.eucalyptus.cloud/eucalyptus/4.4.4/index.html#image-guide/img_concept_understanding_images.html">image guide,</a> for <a href="http://docs.eucalyptus.cloud/eucalyptus/4.4.4/index.html#image-guide/img_task_install_hvm_image.html"> installing an HVM image.</a> </div>
+  </div>
+</section>
+<section class="banner4" id="Community">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="imgboxs">
+          <img src="img/icon13.png" />
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="serverbox secondb">
+          <img src="img/icons5.png" />
+          <h4>Discuss</h4>
+          <p>Chat on the eucalyptus <a href="http://webchat.freenode.net/?channels=eucalyptus" target="_blank">IRC</a> channel, or ask questions on <a href="https://stackoverflow.com/questions/tagged/eucalyptus" target="_blank">Stack Overflow</a></p>
+        </div>
+        <div class="serverbox secondb mrtopa">
+          <img src="img/icons6.png" />
+          <h4>Contribute</h4>
+          <p>Get the<a href="https://github.com/corymbia/eucalyptus" target="_blank"> source,</a> or submit an<a href="https://github.com/corymbia/eucalyptus/issues" target="_blank"> issue</a> on GitHub.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="footerse">
+  <div class="container">
+    <div>
+      <img src="img/logo.png" />
+      <div class="clearfix"></div>
+      <ul class="navb">
+          <li>
+            <a href="https://blog.eucalyptus.cloud/" target="_blank">
+              <img src="img/icon1.png">
+              BLOG
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.eucalyptus.cloud/" target="_blank">
+              <img src="img/icon2.png">
+              DOCS
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Corymbia/eucalyptus" target="_blank">
+              <img src="img/icon3.png">
+              CODE
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<!-- footer start here -->
+<section class="copyright">
+  Copyright © 2018 AppScale Systems. All rights reserved.
+</section>
+<!-- footer end here -->
+
+
+<!-- js start here -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  var $root = $('html, body');
+  $('a').on('click', function(event){
+      var hash = this.hash;
+      // Is the anchor on the same page?
+      if (hash && this.href.slice(0, -hash.length-1) == location.href.slice(0, -location.hash.length-1)) {
+          $root.animate({
+              scrollTop: $(hash).offset().top - 100
+          }, 'slow', function() {
+
+          });
+          return false;
+      }
+  });
+</script>
+<!-- js end here -->
+</body>
 </html>
-
